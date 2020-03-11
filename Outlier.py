@@ -49,7 +49,17 @@ class TrajData:
     m_nOutliers = 0
     m_nOutlyingPartitions = 0
     m_trajectoryList = [] #check out for this, it is of the type CTrajectory
-        
+    m_outlierList = [] #check and ensure that this is a list of outliers
+    m_paramFraction = g_FRACTION_PARAMETER
+    M_paramDistance = g_DISTANCE_PARAMETER
+    m_nLineSegments = 0
+    m_nTrajectoryPartitions = 0
+    readFile = True
+    n_maxNPoints = 0
+
+
+
+       
 #This is implementing Outlier File
 pTrajectory = CTrajectory()
 LineSegment = []
