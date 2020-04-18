@@ -84,7 +84,16 @@ void plot_trajectory(const string infile, const string outfile){
 	COutlierDetector outlierDetector(&data);
 	outlierDetector.PartitionTrajectory();
 	outlierDetector.DetectOutlier();
-	cout << "Size of trajectory outlierList: " << data.m_outlierList.size() << "\n";
+	//cout << "Size of original data trajectory list: " << outlierDetector.m_data->m_trajectoryList.size() << "\n";
+	//cout << "Size of trajectory outlierList: " << outlierDetector.m_data->m_outlierList.size() << "\n\n";
+	cout << "Number of dimensions of data: " << outlierDetector.m_data->m_nDimensions << "\n";
+	cout << "Number of trajectories: " << outlierDetector.m_data->m_nTrajectories << "\n";
+	cout << "Number of outliers: " << outlierDetector.m_data->m_nOutliers << "\n";
+	cout << "Number of outlying partitions in dataset: " << outlierDetector.m_data->m_nOutlyingPartitions << "\n";
+	cout << "Parameter Fraction value: " << outlierDetector.m_data->m_paramFraction << "\n";
+	cout << "Parameter Distance value: " << outlierDetector.m_data->m_paramDistance << "\n";
+	cout << "Number of line segments in original data: " << outlierDetector.m_data->m_nLineSegments << "\n";
+	cout << "Number of line segments in outlier: " << outlierDetector.m_data->m_nTrajectoryPartitions << "\n"; //Trajectory partitions is set to total line segment in OutlierDetector.cpp
 	cout << "Finished partitioning and finding outliers!\n";
 
 	// Output plot of trajectories and outliers
