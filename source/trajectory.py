@@ -63,6 +63,10 @@ def set_default_parameters():
 
 def trajectory_help():
     os.system('./trajectory_detector --help')
-    
-set_g_fraction(0.97)
-set_g_distance(60)
+
+set_max_lineseg(100)
+set_g_fraction(90)
+#set_default_parameters()
+
+
+

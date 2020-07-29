@@ -19,13 +19,13 @@
 
 // This header file contains all the tuning parameters for the outlier detection algorithm
 
-const float g_FRACTION_PARAMETER = (float)0.97;
-const float g_DISTANCE_PARAMETER = (float)60;
+const float g_FRACTION_PARAMETER = (float)90;
+const float g_DISTANCE_PARAMETER = (float)70;
 const float g_MINIMUM_OUTLYING_PROPORTION = (float)0.50;
 
 const int MDL_COST_ADVANTAGE = 20;
 const float MIN_LINESEGMENT_LENGTH = 1.0;
-const float MAX_LINESEGMENT_LENGTH = 10000.0;
+const float MAX_LINESEGMENT_LENGTH = 100;
 
 #define WEIGHTED_DISTANCE(_x,_y,_z) ((float)1.0 * (_x) + (float)1.0 * (_y) + (float)10.0 * (_z))
 // #define WEIGHTED_DISTANCE(_x,_y,_z) ((float)1.0 * (_x) + (float)1.0 * (_y) + (float)5.0 * (_z))
